@@ -12,10 +12,24 @@
 $host= "localhost";
 $user= "root";
 $password= "";
-$email=$_GET['email'];
-$fullname=$_GET['fullname'];
-$user=$_GET['user'];
-$pw=$_GET['pw'];
+$email=$_POST['email'];
+$fullname=$_POST['fullname'];
+$username=$_POST['username'];
+$pw=$_POST['pw'];
+
+
+if($username)
+{
+$conn=mysqli_connect ($host,$user,$password);
+mysqli_select_db ($conn,'dbinstagram');
+$sql="insert into tbinstagram values ('$email', '$fullname', '$username', '$pw')";
+$hasil=mysqli_query ($conn,$sql); 
+}
+
+else{
+	echo "Data Gagal Disimpan";
+}
+
 
 ?>
 
@@ -34,7 +48,7 @@ $pw=$_GET['pw'];
 		</div>
 
 		<div class="user">
-			Username  : <?php echo "$user"; ?><br>
+			Username  : <?php echo "$username"; ?><br>
 		</div>
 
 		<div class="pw">
@@ -44,6 +58,10 @@ $pw=$_GET['pw'];
 		
 	</div>
 </div>
+
+
+
+
 
 
 

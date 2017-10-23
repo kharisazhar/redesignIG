@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="button">
-		<form action="#" method="GET" >
+		<form action="#" method="POST" >
 		<input type="submit" value="Login with Facebook">
 		</form>
 	</div>
@@ -29,12 +29,13 @@
 	<!--Copyright Kharis Azhar-->
 
 	<div class="content">
-		<form action="hasil.php" method="GET">
+		<form action="hasil.php" method="POST">
 			<input type="email" name="email" placeholder="Mobile Number or Email"><br>
 			<input type="text"	name="fullname" placeholder="Full name"><br>
-			<input type="text"	name="user" placeholder="Username"><br>
+			<input type="text"	name="username" placeholder="Username"><br>
 			<input type="password"	name="pw" placeholder="Password"><br>
 			<input type="submit" value="Sign Up">
+
 		</form>
 
 		
